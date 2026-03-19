@@ -1,23 +1,133 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Coming Soon</title>
+    <title>Abid | Software Engineer & Community Builder</title>
     <style>
-        body { 
-            font-family: sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            margin: 0; 
-            background-color: #f4f4f9; 
+        /* Base Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9fbfc;
         }
-        h1 { color: #333; }
+        h1, h2, h3 { color: #1a1a1a; margin-bottom: 10px; }
+        a { text-decoration: none; color: #1a73e8; }
+        a:hover { text-decoration: underline; }
+        .container { width: 90%; max-width: 1000px; margin: auto; padding: 40px 0; }
+        
+        /* Navbar */
+        nav {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .btn-resume { background: #1a73e8; color: white; padding: 8px 16px; border-radius: 4px; }
+        .btn-resume:hover { background: #1557b0; text-decoration: none; }
+
+        /* Hero Section */
+        .hero { text-align: center; padding: 100px 20px; background: white; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto 20px; }
+
+        /* Grid Layouts for Sections */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        
+        /* Cards */
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .tag { display: inline-block; background: #e8f0fe; color: #1a73e8; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; margin-right: 5px; margin-bottom: 10px; }
+
+        /* Footer */
+        footer { background: #1a1a1a; color: white; text-align: center; padding: 30px 20px; }
+        footer a { color: #8ab4f8; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            nav ul { display: none; /* In a real app, add a hamburger menu here */ }
+        }
     </style>
 </head>
 <body>
-    <h1>Portfolio is under construction 🚧</h1>
+
+    <nav>
+        <h2>Abid.</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#contact" class="btn-resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Hi, I'm Abid</h1>
+        <p>Information Systems student passionate about building scalable full-stack applications and empowering the next generation of tech leaders.</p>
+        <a href="#contact" class="btn-resume">Get in touch</a>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>I am a student at the University of Indonesia, focusing on bridging the gap between technical development and user experience. Whether I'm coding a backend infrastructure or breaking down complex algorithms for students, I love solving problems that bring people together.</p>
+        <p><strong>Tech Stack:</strong> Python, Django, Java, JavaScript, Flutter.</p>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Featured Work</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>SRVE - Community Sports App</h3>
+                <span class="tag">Django</span> <span class="tag">Flutter</span> <span class="tag">Full-Stack</span>
+                <p>Designed and developed a comprehensive community application for sports enthusiasts. Handled end-to-end development, building a robust backend architecture with Django and creating an intuitive mobile frontend using Flutter.</p>
+            </div>
+            <div class="card">
+                <h3>BEM Commercial Website</h3>
+                <span class="tag">Software Engineering</span> <span class="tag">Web Dev</span>
+                <p>Collaborated as a Software Engineer Intern to build and deploy a commercial-facing website, ensuring production-level code quality and seamless user experience for external stakeholders.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="container">
+        <h2>Leadership & Community Impact</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Assistant Lecturer</h3>
+                <p><strong>Data Structures & Algorithms</strong></p>
+                <p>Mentoring peers and explaining complex technical concepts like Big O notation, dynamic programming, and tree algorithms. Focused on making challenging material accessible and actionable for students.</p>
+            </div>
+            <div class="card">
+                <h3>Team Leader</h3>
+                <p><strong>AIESEC Future Leaders</strong></p>
+                <p>Leading the 2026 term by designing curriculum, managing team dynamics, and driving cross-departmental collaboration to foster leadership development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="explorations" class="container" style="background-color: white; padding: 40px; border-radius: 8px;">
+        <h2>Current Explorations</h2>
+        <p>Beyond coursework, I am deeply interested in the generative AI space. I am currently developing a digital product: a comprehensive PDF guide featuring optimized prompts for AI models like ChatGPT and Gemini, aimed at helping users maximize their productivity.</p>
+    </section>
+
+    <footer id="contact">
+        <h2>Let's Connect</h2>
+        <p>Always open to discussing tech, community building, or new opportunities.</p>
+        <p>
+            <a href="#">LinkedIn</a> | 
+            <a href="#">GitHub</a> | 
+            <a href="#">Email Me</a>
+        </p>
+    </footer>
+
 </body>
 </html>
